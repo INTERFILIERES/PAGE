@@ -11,6 +11,14 @@
 	font-weight: 400;
 	font-style: normal;
 }
+
+@font-face {
+    font-family: 'Brookshire'; /* Nombre de la familia de fuentes */
+    src: url('./EFCO Brookshire Regular.ttf') format('truetype'); /* Ruta al archivo y su formato */
+    font-weight: normal; /* Peso de la fuente */
+    font-style: normal; /* Estilo de la fuente */
+}
+
 /*------------------ DEFAULT STYLES ------------------*/
 *::selection{
 	background: rgba(13, 90, 165, 0.7);

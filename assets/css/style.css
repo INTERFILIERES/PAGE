@@ -89,6 +89,12 @@ html {
   src: url("../fonts/paladins.eot?#iefix") format("embedded-opentype"), url("../fonts/paladins.woff2") format("woff2"), url("../fonts/paladins.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
+
+@font-face {
+  font-family: 'Brookshire'; /* Nombre de la familia de fuentes */
+  src: url('./EFCO Brookshire Regular.ttf') format('truetype'); /* Ruta al archivo y su formato */
+  font-weight: normal; /* Peso de la fuente */
+  font-style: normal; /* Estilo de la fuente */ }
 /*------------------ DEFAULT STYLES ------------------*/
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\0000315}}
 *::-moz-selection {
@@ -2062,7 +2068,7 @@ footer {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003154}}
   .marathon-slide .marathon-text-right,
   .marathon-slide .marathon-text-left {
-    font-family: 'Paladins'; }
+    font-family: 'Brookshire'; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003158}}
   .marathon-slide .marathon-text-left {
     position: absolute;
