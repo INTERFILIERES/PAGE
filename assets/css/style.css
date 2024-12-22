@@ -19,6 +19,7 @@ Version: 1.0
 /*-------------------- RESETE STYLES --------------------*/
 @import url("https://fonts.googleapis.com/css?family=Kanit:400,500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Red+Hat+Display:400,400i,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap");
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_normalize\.scss}line{font-family:\000032}}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -91,10 +92,13 @@ html {
   font-style: normal; }
 
 @font-face {
-  font-family: 'Brookshire'; /* Nombre de la familia de fuentes */
-  src: url('./EFCO Brookshire Regular.ttf') format('truetype'); /* Ruta al archivo y su formato */
-  font-weight: normal; /* Peso de la fuente */
-  font-style: normal; /* Estilo de la fuente */ }
+  font-family: 'EFCOBrookshire';
+  src: url('../fonts/EFCOBrookshireRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+  
 /*------------------ DEFAULT STYLES ------------------*/
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\0000315}}
 *::-moz-selection {
@@ -106,10 +110,10 @@ html {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\0000319}}
 body {
-  color: #8b8b8b;
+  color: #fff;
   line-height: 160%;
   font-size: 18px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif;
   min-width: 320px;
   position: relative;
   overflow-x: hidden; }
@@ -138,17 +142,17 @@ section {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\0000345}}
 p {
-  font-family: "Red Hat Display", sans-serif; }
+  font-family: "Mirza", serif; /*font-family: "Red Hat Display", sans-serif;*/ }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\0000348}}
 h1, h2, h3, h4, h5, h6 {
-  color: #333333;
+  color: #ffffff;
   font-weight: 700;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif; /*font-family: "Red Hat Display", sans-serif;*/
   line-height: 1.3em; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\0000353}}
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #333333; }
+    color: #ffffff; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\0000358}}
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
@@ -188,7 +192,7 @@ a {
   transition: .35s ease; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\0000386}}
   a:hover {
-    color: #ffd910; }
+    color: #30c1db; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\0000390}}
 i {
@@ -284,7 +288,7 @@ h2.title {
         color: #d52b74; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\00003172}}
   .dance-page p {
-    color: #bcbcbc; }
+    color: #fff; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_typography\.scss}line{font-family:\00003177}}
 .dance-slogan {
@@ -462,7 +466,7 @@ body.page-loaded .page-preloader-cover {
     top: 0%;
     -webkit-animation: cssload-rotate-two 1.15s linear infinite;
             animation: cssload-rotate-two 1.15s linear infinite;
-    border-right: 6px solid #ffd910; }
+    border-right: 6px solid #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\0000352}}
   .cssload-inner.cssload-three {
     right: 0%;
@@ -651,10 +655,10 @@ header {
           padding: 10px 15px 10px 25px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003312}}
           .nav-list li.dropdown ul li a:hover {
-            color: #ffd910; }
+            color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003317}}
         .nav-list li.dropdown ul li.active-page a {
-          color: #ffd910; }
+          color: #30c1db; }
 
 @media (min-width: 768px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003327}}
@@ -804,7 +808,7 @@ header {
         margin-right: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003461}}
     .marathon-header-fixed .top-panel .container .social-list a:hover i {
-      color: #ffd910; }
+      color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003465}}
     .marathon-header-fixed .top-panel .container .social-list i {
       color: #fff; }
@@ -821,16 +825,16 @@ header {
       color: #fff; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003479}}
       .marathon-header-fixed .nav-list > li > a:after {
-        background-color: #ffd910; }
+        background-color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003482}}
       .marathon-header-fixed .nav-list > li > a i {
         color: #fff; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003485}}
       .marathon-header-fixed .nav-list > li > a:hover {
-        color: #ffd910; }
+        color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003487}}
         .marathon-header-fixed .nav-list > li > a:hover i {
-          color: #ffd910; }
+          color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003493}}
   .marathon-header-fixed .header-nav .header-nav-cover {
     border-top-color: rgba(255, 255, 255, 0.3); }
@@ -890,7 +894,7 @@ header {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003547}}
 .marathon-header-fixed.header-top {
   top: -115px;
-  background-color: #0d5aa5; }
+  background-color: #002257; }
   @media (max-width: 1366px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003547}}
     .marathon-header-fixed.header-top {
@@ -1033,7 +1037,7 @@ header {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    font-family: "Red Hat Display", sans-serif; }
+        font-family: "Mirza", serif; /*font-family: "Red Hat Display", sans-serif; */}
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_header\.scss}line{font-family:\00003681}}
 .breadcrumbs li a,
@@ -1320,7 +1324,7 @@ header {
 button, input[type="button"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif; /*font-family: "Red Hat Display", sans-serif*/;
   -webkit-transition: .35s ease;
   transition: .35s ease; }
 
@@ -1345,7 +1349,8 @@ textarea {
   height: 50px;
   padding: 0 30px;
   font-size: 18px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
   color: #8b8b8b;
   border: 1px solid #d9d9d9;
   -webkit-transition: .35s ease;
@@ -1468,7 +1473,8 @@ textarea::placeholder {
   border: 1px solid #d9d9d9;
   padding: 0 30px 0 30px;
   font-size: 18px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
   color: #8b8b8b;
   position: relative;
   z-index: 1; }
@@ -1571,7 +1577,8 @@ textarea::placeholder {
   font-size: 14px;
   line-height: 1.6;
   color: #8b8b8b;
-  font-family: "Red Hat Display", sans-serif; }
+  font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/ }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_forms\.scss}line{font-family:\00003154}}
 .checkbox-cover p:before {
@@ -1787,7 +1794,7 @@ footer {
       left: 0;
       height: 1px;
       width: 0;
-      background-color: #ffd910;
+      background-color: #30c1db;
       -webkit-transition: .35s ease;
       transition: .35s ease; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_footer\.scss}line{font-family:\0000355}}
@@ -1914,7 +1921,8 @@ footer {
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/;
   letter-spacing: 0.1em;
   border: 2px solid #0d5aa5;
   color: #fff;
@@ -1969,15 +1977,15 @@ footer {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\0000363}}
     .btn.btn-white:hover {
       color: #fff;
-      border-color: #ffd910; }
+      border-color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\0000368}}
   .btn.btn-yellow {
-    border-color: #ffd910;
+    border-color: #30c1db;
     color: #333333;
     font-weight: 500; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\0000372}}
     .btn.btn-yellow:before {
-      background-color: #ffd910; }
+      background-color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\0000376}}
   .btn.btn-pink {
     padding-left: 27px;
@@ -2020,7 +2028,7 @@ footer {
     color: #fff; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003111}}
   .to-top:hover {
-    background-color: #ffd910;
+    background-color: #30c1db;
     -webkit-box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15); }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003115}}
@@ -2071,18 +2079,18 @@ z-index: 0;  } */
     opacity: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003150}}
     .marathon-slide .slider-location .date {
-      color: #ffd910; }
+      color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003154}}
   .marathon-slide .marathon-text-right,
   .marathon-slide .marathon-text-left {
-    font-family: 'Paladins'; }
+    font-family: 'EFCOBrookshire'; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003158}}
   .marathon-slide .marathon-text-left {
     position: absolute;
-    top: 35%;
-    right: 59%;
+    top: 27.5%;
+    right: 42.5%;
     font-size: 160px;
-    line-height: 80%;
+    line-height: 95%;
     text-align: right;
     text-transform: uppercase;
     color: transparent;
@@ -2094,7 +2102,7 @@ z-index: 0;  } */
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003173}}
   .marathon-slide .marathon-text-right {
     position: absolute;
-    top: 51%;
+    top: 45%;
     left: 50%;
     color: #fff;
     font-size: 220px;
@@ -2107,12 +2115,13 @@ z-index: 0;  } */
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: scale(0.1);
   transform: translate(-50%, -50%); /* Centra el elemento completamente */
-  width: 100%; /* Ajusta según necesites */
-  height: 100%; /* Ajusta según necesites */
+  width: 70%; /* Ajusta según necesites */
+  height: 70%; /* Ajusta según necesites */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; /* Cambia a 'contain' si no quieres que se recorte */
+  background-size: contain; /* Cambia a 'contain' si no quieres que se recorte */
 }
 
 .marathon-effect-large {
@@ -2130,17 +2139,17 @@ z-index: 0;  } */
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003194}}
 .marathon-img {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-height: 90%;
+  max-height: 75%;
   z-index: 2;
   opacity: 0; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003204}}
 .marathon-slide-1 .marathon-img {
-  top: 55%;
+  top: 50%;
   left: 50%; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003210}}
@@ -2587,7 +2596,8 @@ z-index: 0;  } */
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/;
   margin-bottom: 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003552}}
   .mission-meta li {
@@ -2647,7 +2657,7 @@ z-index: 0;  } */
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #fbfbfb;
+  background-color: #002257;
   padding: 140px 0px 136px;
   text-align: center;
   -webkit-clip-path: polygon(100% 0%, 100% 95%, 50% 100%, 0 95%, 0 0, 50% 7%);
@@ -2695,8 +2705,8 @@ z-index: 0;  } */
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003647}}
 .event-schedule-item {
-  background-color: #fff;
-  border: 2px solid #f0f0f0;
+  background-color: #002257;;
+  border: 2px solid #30c1db;
   margin-bottom: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2710,7 +2720,7 @@ z-index: 0;  } */
     text-align: center;
     margin: 10px 0px;
     padding: 30px 0px;
-    border-right: 1px solid #f0f0f0;
+    border-right: 1px solid #30c1db;
     position: relative;
     z-index: 1; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003663}}
@@ -2745,10 +2755,10 @@ z-index: 0;  } */
       line-height: 30px;
       text-align: center;
       padding: 0 21px;
-      background-color: #f0f0f0;
+      background-color: #2fa8bd;
       display: inline-block;
       font-weight: 700;
-      color: #333333;
+      color: #ffffff;
       margin-bottom: 15px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\00003701}}
     .event-schedule-item .schedule-item-info.active h4:before {
@@ -3162,7 +3172,8 @@ z-index: 0;  } */
     line-height: 30px;
     text-align: center;
     padding: 0 17px;
-    font-family: "Red Hat Display", sans-serif; }
+    font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/ }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031064}}
 .marathon-news-date {
@@ -3206,7 +3217,7 @@ z-index: 0;  } */
   .marathon-post-meta i {
     margin-right: 5px;
     font-size: 14px;
-    color: #ffd910; }
+    color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031103}}
   .marathon-post-meta a {
     color: #8b8b8b; }
@@ -3362,18 +3373,20 @@ z-index: 0;  } */
       background: #252525;
       line-height: 30px;
       padding: 0 14px;
-      font-family: "Red Hat Display", sans-serif;
+      font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
       text-transform: capitalize; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031234}}
       .post-item-cover .post-thumbnail .post-category a {
         color: #fff; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031236}}
         .post-item-cover .post-thumbnail .post-category a:hover {
-          color: #ffd910; }
+          color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031242}}
   .post-item-cover .meta {
     margin-bottom: 35px;
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
     font-size: 16px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031246}}
     .post-item-cover .meta span {
@@ -3747,7 +3760,8 @@ blockquote:before {
   border: 1px solid #d9d9d9;
   color: #333333;
   display: block;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
   border-radius: 0px; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031566}}
@@ -3960,7 +3974,7 @@ blockquote:before {
     color: #0d5aa5; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031734}}
   .review-btn:hover i {
-    color: #ffd910; }
+    color: #30c1db; }
 
 /*----------------- S-ABOUT-SPEAKER -----------------*/
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031741}}
@@ -4028,7 +4042,7 @@ blockquote:before {
     font-size: 96px;
     font-weight: 500;
     line-height: 1.25em;
-    color: #ffd910; }
+    color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031813}}
   .have-prepared h4 {
     color: #fff;
@@ -4045,7 +4059,7 @@ blockquote:before {
       left: 50%;
       -webkit-transform: translate(-50%, 0);
               transform: translate(-50%, 0);
-      background: #ffd910;
+      background: #30c1db;
       width: 46px;
       height: 4px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000031831}}
@@ -4258,7 +4272,8 @@ blockquote:before {
       font-weight: 700; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032017}}
     .our-speaker-item .speaker-item-info .prof {
-      font-family: "Red Hat Display", sans-serif;
+      font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
       font-weight: 300;
       font-size: 18px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032023}}
@@ -4341,7 +4356,7 @@ blockquote:before {
   padding-left: 15px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032087}}
   .conference-slide-item .date {
-    color: #ffd910;
+    color: #30c1db;
     letter-spacing: 0.17em;
     text-transform: uppercase;
     font-weight: 700;
@@ -4395,7 +4410,7 @@ blockquote:before {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: #ffd910;
+      background-color: #30c1db;
       top: 62%;
       margin-right: 192px;
       right: 100%;
@@ -4577,7 +4592,8 @@ blockquote:before {
   width: calc(50% - 10px); }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032305}}
   .mission-list li {
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
     font-weight: 300;
     margin-bottom: 10px;
     padding-left: 17px;
@@ -4821,7 +4837,8 @@ blockquote:before {
   .pricing-table-item .price-text {
     color: #232756;
     font-weight: 300;
-    font-family: "Red Hat Display", sans-serif; }
+    font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/ }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032533}}
   .pricing-table-item .price-list {
     text-align: left;
@@ -4829,7 +4846,8 @@ blockquote:before {
     margin: 0 auto;
     padding: 45px 20px 51px 20px;
     color: #898686;
-    font-family: "Red Hat Display", sans-serif; }
+    font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/ }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032540}}
     .pricing-table-item .price-list li {
       text-transform: capitalize;
@@ -4853,12 +4871,14 @@ blockquote:before {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032561}}
   .s-buy-ticket h5 {
     margin-bottom: 15px;
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
     text-transform: capitalize; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032567}}
 .buy-ticket-left {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
   max-width: 500px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032570}}
   .buy-ticket-left p {
@@ -4890,7 +4910,7 @@ blockquote:before {
       color: #8b8b8b; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032591}}
       .ticket-contact-item li a:hover {
-        color: #ffd910; }
+        color: #30c1db; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032595}}
     .ticket-contact-item li span {
       margin-right: 4px;
@@ -4935,7 +4955,8 @@ blockquote:before {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032632}}
     .buy-ticket-form .pay-method .pay-item p {
       color: #333333;
-      font-family: "Red Hat Display", sans-serif;
+      font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
       text-transform: capitalize; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032637}}
     .buy-ticket-form .pay-method .pay-item span {
@@ -4973,7 +4994,8 @@ blockquote:before {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032664}}
   .buy-ticket-form .price-final span {
     color: #333333;
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
     font-weight: 500;
     font-size: 20px;
     text-transform: capitalize;
@@ -5019,7 +5041,7 @@ blockquote:before {
     top: 50%;
     width: 34px;
     height: 34px;
-    border: 1px solid #ffd910;
+    border: 1px solid #30c1db;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5044,7 +5066,7 @@ blockquote:before {
       right: 28px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032728}}
     .conference-news-slider .slick-arrow:hover {
-      background-color: #ffd910; }
+      background-color: #30c1db; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032733}}
 .conference-news-slide {
@@ -5139,7 +5161,8 @@ blockquote:before {
     line-height: 30px;
     text-align: center;
     padding: 0 17px;
-    font-family: "Red Hat Display", sans-serif; }
+    font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/ }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000032811}}
 .conference-post-content {
@@ -5449,7 +5472,7 @@ blockquote:before {
         color: rgba(255, 255, 255, 0.6); }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000033092}}
       .s-dance-counter .clock-timer .clock-item span {
-        color: #ffd910;
+        color: #30c1db;
         line-height: 1em;
         margin-bottom: 10px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000033098}}
@@ -5831,7 +5854,8 @@ body.modal {
   .dance-tabs li {
     border-radius: 10px;
     color: rgba(255, 255, 255, 0.7);
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
     padding: 20px 38px;
     cursor: pointer;
     display: -webkit-box;
@@ -5859,7 +5883,8 @@ body.modal {
       color: #fff;
       -webkit-transition: .35s ease;
       transition: .35s ease;
-      font-family: "Red Hat Display", sans-serif;
+      font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
       font-size: 31px;
       font-weight: 700;
       text-transform: capitalize;
@@ -5906,7 +5931,8 @@ body.modal {
       margin-bottom: 15px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000033488}}
     .dance-event-item .dance-event-info p {
-      font-family: "Red Hat Display", sans-serif;
+      font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
       font-weight: 300;
       color: #bcbcbc;
       margin-bottom: 14px; }
@@ -6042,7 +6068,8 @@ body.modal {
   top: 10px;
   right: 10px;
   z-index: 2;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
   background-color: #d52b74;
   line-height: 30px;
   padding: 0 20px;
@@ -6059,7 +6086,8 @@ body.modal {
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000033636}}
 .dance-post-meta {
   color: #c7c7c7;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Mirza", serif;
+  /*font-family: "Red Hat Display", sans-serif;*/
   margin-top: 20px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/F\:\/localhost\/giner-html\/template\/assets\/scss\/_site\.scss}line{font-family:\000033640}}
   .dance-post-meta span {
