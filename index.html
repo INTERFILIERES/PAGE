@@ -1,690 +1,162 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>L'interfilières</title>
-	<!-- =================== META =================== -->
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="shortcut icon" href="INTERFILIERES/main-logo-1.png">
-	<!-- =================== STYLE =================== -->
-	<link rel="stylesheet" type="text/css" href="assets/css/slick.min.css"/>
-	<link rel="stylesheet" href="assets/css/bootstrap-grid.css">
-	<link href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nice-select.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Simple</title>
+    <style>
 
-	<style>
-		.bg-effect {
-			position: fixed; /* Fija el fondo en la pantalla */
-			top: 0;
-			left: 0;
-			width: 100vw; /* Ocupa todo el ancho de la ventana */
-			height: 200vh; /* Ocupa todo el alto de la ventana */
-			background-size: cover; /* Asegura que la imagen cubra todo */
-			background-position: top; /* Alinea la imagen desde la parte superior */
-			background-repeat: no-repeat; /* Evita que se repita */
-			z-index: -1; /* Envía el fondo detrás del contenido */
-			margin: 0; /* Elimina márgenes */
-			padding: 0; /* Elimina padding */
-		}
-		html, body {
-			margin: 0; /* Asegura que no haya márgenes en la página */
-			padding: 0; /* Asegura que no haya padding en la página */
-			height: 100%; /* Establece altura completa para evitar barras blancas */
-		}
-	</style>
+        @font-face {
+            font-family: 'MollieRocky';
+            src: url('./assets/fonts/MollieRockyDEMOMedium.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'OCRAExtended';
+            src: url('./assets/fonts/OCRAExtended.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            color: rgb(187, 183, 175);
+            font-family: 'OCRAExtended', sans-serif;
+            background-image: url('./WARMUP/fonde-black2.jpg'); /* Cambia esto por tu imagen */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.1); /* Ajusta la opacidad */
+            background-blend-mode: darken; /* Mezcla la imagen con el color */ 
+        }
+
+        .logo-text {
+            font-family: 'MollieRocky', sans-serif; 
+            font-size: 225px; /* Incrementa el tamaño del texto */
+            color: rgb(187, 183, 175);
+            text-shadow: -5px 5px 0 rgba(0, 0, 0, 1); /* Sombra sólida abajo a la izquierda */
+            text-transform: uppercase;
+            width: 100%; /* Hace que el logo ocupe todo el ancho */
+            text-align: center; /* Asegura que el texto esté centrado */
+        }
+
+        a {
+            max-width: 1500px;
+            margin: 0px;
+            line-height: 1.5;
+            font-family: 'OCRAExtended', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0, 26, 255, 0.8);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            max-width: 500px;
+            margin: 0px;
+            line-height: 1.5;
+            font-family: 'OCRAExtended', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            font-family: 'OCRAExtended', sans-serif;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.8);
+            letter-spacing: 2px;
+            color: rgb(0, 255, 170);
+        }
+
+        .tickets-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ticket {
+        display: inline-block;
+        margin: 25px;
+        padding: 45px 80px;
+        background-color: rgba(127, 52, 149, 0.8);
+        border: 2px solid rgb(187, 183, 175);
+        border-radius: 10px;
+        color: rgb(187, 183, 175);
+        font-family: 'OCRAExtended', sans-serif;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        font-size: 35px;
+        text-align: center;
+        text-decoration: none; /* Remove underline */
+        transition: transform 0.2s, box-shadow 0.2s; /* Add hover effect */
+        }
+
+        .ticket span {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: rgb(0, 0, 0);
+            font-style: italic;
+        }
+
+        .ticket:hover {
+        transform: scale(1.05); /* Slightly enlarge on hover */
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .images-row {
+            display: flex;
+            justify-content: center; /* Centrar las imágenes horizontalmente */
+            align-items: center; /* Alinear verticalmente */
+            gap: 20px; /* Espaciado entre las imágenes */
+            margin: 20px 0; /* Margen superior e inferior */
+        }
+
+        .images-row img {
+            height: 200px; /* Altura fija para todas las imágenes */
+            object-fit: cover; /* Ajustar la imagen para que cubra el espacio */
+            border-radius: 10px; /* Bordes redondeados (opcional) */
+        }
+
+        .images-row-2 {
+            display: flex;
+            justify-content: center; /* Centrar las imágenes horizontalmente */
+            align-items: center; /* Alinear verticalmente */
+            gap: 20px; /* Espaciado entre las imágenes */
+            margin: 20px 0; /* Margen superior e inferior */
+        }
+
+        .images-row-2 img {
+            height: 250px; /* Altura fija para todas las imágenes */
+            object-fit: cover; /* Ajustar la imagen para que cubra el espacio */
+            border-radius: 10px; /* Bordes redondeados (opcional) */
+        }
+
+    </style>
 </head>
-<body id="home">
-	<!-- =============== PRELOADER =============== -->
-	<div class="page-preloader-cover">
-		<div class="cssload-loader">
-			<div class="cssload-inner cssload-one"></div>
-			<div class="cssload-inner cssload-two"></div>
-			<div class="cssload-inner cssload-three"></div>
-		</div>
-	</div>
-	<!-- ============== PRELOADER END ============== -->
-	<span class="bg-effect" style="background-image: url(INTERFILIERES/hola.png);"></span>
-	<!-- ================= HEADER ================= -->
-	<header class="marathon-header-fixed header-fixed">
-		<a href="#" class="nav-btn">
-			<span></span>
-			<span></span>
-			<span></span>
-		</a>
-		<div class="top-panel">
-			<div class="container">
-				<a href="index.html" class="log	o"><img src="INTERFILIERES/secondary-logo-2.png" alt="logo"></a>
-				<ul class="social-list">
-					<li><a target="_blank" href="https://www.facebook.com/interfilieres.upsaclay/"><i class="fab fa-facebook-f"></i></a></li>
-					<li><a target="_blank" href="https://x.com/univparissaclay"><i class="fab fa-twitter"></i></a></li>
-					<li><a target="_blank" href="https://www.instagram.com/interfilieres_upsaclay"><i class="fab fa-instagram"></i></a></li>
-					<li><a target="_blank" href="https://www.youtube.com/@COI-ps"><i class="fab fa-youtube"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="header-nav">
-			<div class="container">
-				<div class="header-nav-cover">
-					<nav class="nav-menu menu">
-						<ul class="nav-list">
-							<li class="dropdown active-page">
-								<a href="#">Accueil  <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-								<ul>
-									<li class="active-page"><a href="index.html">Accueil  Marathon</a></li>
-									<li><a href="conference-page.html">Accueil  Conférence </a></li>
-									<li><a href="dance-page.html">Accueil Danse </a></li>
-								</ul>
-							</li>
-							<li><a href="#about">À propos de nous</a></li>
-							<li><a href="#schedule">Horaire</a></li>
-							<li><a href="#location">Lieu</a></li>
-							<li><a href="#register">Inscription</a></li>
-							<li><a href="#news">Actualités</a></li>
-							<li class="dropdown">
-								<a href="#">pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-								<ul>
-									<li><a href="conference-team.html">Équipe de la Conférence</a></li>
-									<li><a href="dance-team.html">Équipe de Danse</a></li>
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="page-error.html">Page Erreur 404</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-					<a href="#register" class="btn btn-white"><span>Acheter Billets</span></a>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- =============== HEADER END =============== -->
+<body>
+    <div class="logo-text">WARMUP</div>
 
-	<!-- ============= MARATHON-SLIDER ============= -->
-	<section class="s-marathon-slider">
-		<div class="marathon-slider">
-			<div class="marathon-slide marathon-slide-1">
-				<div data-hover-only="true" data-pointer-events="true" data-scalar-y="0" class="scene">
-					<div class="scene-item" data-depth="0.1">
-						<span class="marathon-effect" style="background-image: url(INTERFILIERES/feuilles-2.png);"></span>
-					</div>
-					<div class="scene-item" data-depth="0.2">
-						<img class="marathon-img" src="INTERFILIERES/main-logo-2.svg" alt="img">
-					</div>
-					<div class="scene-item" data-depth="0.3">
-						<span class="marathon-effect" style="background-image: url(INTERFILIERES/fleurs-2.png);"></span>
-					</div>
-				</div>
-			</div>
-			<div class="marathon-slide marathon-slide-2">
-				<div data-hover-only="true" data-pointer-events="true" data-scalar-y="0" class="scene">
-					<div class="scene-item" data-depth="0.1">
-						<span class="marathon-effect" style="background-image: url(INTERFILIERES/feuilles-2.png);"></span>
-					</div>
-					<div class="scene-item" data-depth="0.5">
-						<div class="slider-location">Chateau de saint jean <br>de beauregard <span class="date">31 mai 2025</span></div>
-					</div>
-					<div class="scene-item" data-depth="0.35">
-						<div class="marathon-text-left">Toute <br>monde <br> y sera!</div>
-					</div>
-					<div class="scene-item" data-depth="0.3">
-						<span class="marathon-effect" style="background-image: url(INTERFILIERES/fleurs-2.png);"></span>
-					</div>
-					<!--<div class="scene-item" data-depth="0.5">
-						<div class="slider-location">San Francisco <br>marathon <span class="date">27 dec 2019</span></div>
-					</div>
-					<div class="scene-item" data-depth="0.35">
-						<div class="marathon-text-left">L'eveil<br>de</div>
-					</div>
-					<div class="scene-item" data-depth="0.35">
-						<div class="marathon-text-right">Gaia</div>
-					</div>-->
-				</div>
-			</div>
-			<div class="marathon-slide marathon-slide-3">
-				<div data-hover-only="true" data-pointer-events="true" data-scalar-y="0" class="scene">
-					<div class="scene-item" data-depth="0.05">
-						<span class="marathon-effect" style="background-image: url(INTERFILIERES/feuilles-2.png);"></span>
-					</div>
-					<div class="scene-item" data-depth="0.5">
-						<span class="marathon-effect" style="background-image: url(INTERFILIERES/fleurs-2.png);"></span>
-					</div>
-					<div class="scene-item" data-depth="0.35">
-						<div class="marathon-text-left">Soirées</div>
-					</div>
-					<div class="scene-item" data-depth="0.35">
-						<div class="marathon-text-right">Dingues!</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--<img class="marathon-slider-shape" src="assets/img/bocajuniors.png" alt="shape"> -->
-		<!--<img class="marathon-slider-shape" src="assets/img/slider-home1-shape2.png" alt="shape"> -->
-		<div id="clockdiv" class="clock-timer clock-timer-marathon">
-			<div class="days-item">
-				<img src="assets/img/counter-1.png" alt="img">
-				<span class="days"></span>
-				<div class="smalltext">Days</div>
-			</div>
-			<div class="hours-item">
-				<img src="assets/img/counter-2.png" alt="img">
-				<span class="hours"></span>
-				<div class="smalltext">Hours</div>
-			</div>
-			<div class="minutes-item">
-				<img src="assets/img/counter-3.png" alt="img">
-				<span class="minutes"></span>
-				<div class="smalltext">Minutes</div>
-			</div>
-			<div class="seconds-item">
-				<img src="assets/img/counter-4.png" alt="img">
-				<span class="seconds"></span>
-				<div class="smalltext">Seconds</div>
-			</div>
-		</div>
-	</section>
-	<!-- =========== MARATHON-SLIDER END =========== -->
+    <div class="images-row-2">
+        <img src="./WARMUP/tete.png" alt="Imagen 1">
+        <p>Le Lorem Ipsum est simplement du faux texte employé dans lan livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des aplicaciones de mise en page de texto, comme Aldus PageMaker.</p>
+    </div>
 
-	<!-- ============== S-OUR-MISSION ============== -->
-	<section id="about" class="s-our-mission">
-		<div class="container">
-			<img class="mission-effect" src="assets/img/our-mission-5.svg" alt="img">
-			<h2 class="title">L'interfilières 2025</h2>
-			<div class="row">
-				<div class="col-lg-6 our-mission-img">
-					<span>
-						<img class="mission-img-effect-1" src="assets/img/our-mission-2.svg" alt="img">
-						<img class="mission-img rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/550X412.png" alt="img">
-						<img class="mission-img-effect-4" src="assets/img/tringle-gray-little.svg" alt="img">
-					</span>
-				</div>
-				<div class="col-lg-6 our-mission-info">
-					<ul class="mission-meta">
-						<li><i aria-hidden="true" class="fas fa-map-marker-alt"></i>Orsay</li>
-						<li><i aria-hidden="true" class="fas fa-calendar-alt"></i>31.10.2019</li>
-					</ul>
-					<h4>Od tempor incididunt ut labore aliqua. ullamco laboris nisi ut aliquip</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm od tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-					<div class="mission-number-cover">
-						<div class="mission-number-item">
-							<div class="number">2000+</div>
-							<span>Participant</span>
-						</div>
-						<div class="mission-number-item">
-							<div class="number">42.4km</div>
-							<span>run distance</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- ============ S-OUR-MISSION END ============ -->
 
-	<!-- ================ S-CHOOSE-US ================ -->
-	<section class="s-choose-us" style="background-image: url(INTERFILIERES/arbre-2.png);">
-		<div class="container">
-			<h2 class="title"><span>Nos avantages</span></h2>
-			<div class="row">
-				<div class="col-sm-6 col-md-6 col-lg-3 choose-us-item">
-					<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-1.png" alt="img">
-					<h4>Billet pas chere</h4>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-3 choose-us-item">
-					<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-2.png" alt="img">
-					<h4>Navettes partout</h4>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-3 choose-us-item">
-					<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-3.png" alt="img">
-					<h4>De l'eau et Eco-goblets</h4>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-3 choose-us-item">
-					<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-4.png" alt="img">
-					<h4>Securisme</h4>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-6 col-md-6 col-lg-3 choose-us-item">
-					<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-1.png" alt="img">
-					<h4>Billet pas chere</h4>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-3 choose-us-item">
-					<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-2.png" alt="img">
-					<h4>Navettes partout</h4>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-3 choose-us-item">
-					<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-3.png" alt="img">
-					<h4>De l'eau et Eco-goblets</h4>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-3 choose-us-item">
-					<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-4.png" alt="img">
-					<h4>Securisme</h4>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- ============== S-CHOOSE-US END ============== -->
+    <div class="tickets-container">
+        <a href="https://www.GOOGLE.com" target="_blank" class="ticket">
+            Billet 1<br>9 €<span>Etudiants UPS</span>
+        </a>
+        <a href="https://www.GOOGLE.com" target="_blank" class="ticket">
+            Billet 2<br>15 €<span>Extérieures</span>
+        </a>
+    </div>
 
-	<!-- ============== S-EVENT-SCHEDULE ============== -->
-	<section id="schedule" class="s-event-schedule">
-		<div class="container">
-			<h2 class="title"><span>calendrier des événements</span></h2>
-			<img class="schedule-effect-white"src="assets/img/tringle-white.svg" alt="img">
-			<img class="schedule-effect-yellow"src="assets/img/tringle-yellow-little.svg" alt="img">
-			<div class="row">
-				<div class="col-xl-6">
-					<div class="event-schedule-tabs">
-						<div class="event-schedule-item">
-							<div class="schedule-item-img">
-								<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-1.png" alt="img">
-							</div>
-							<div class="schedule-item-info">
-								<div class="date">9:00 - 11:00</div>
-								<h4>Excepteur sint occaecat cupidatat</h4>
-								<div class="schedule-info-content" style="display: block;">
-									<p>At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesentium volup</p>
-								</div>
-							</div>
-						</div>
-						<div class="event-schedule-item">
-							<div class="schedule-item-img"><img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-2.png" alt="img"></div>
-							<div class="schedule-item-info">
-								<div class="date">11:00 - 13:00</div>
-								<h4>Sed ut perspiciatis unde omnis</h4>
-								<div class="schedule-info-content">
-									<p>At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesentium volup</p>
-								</div>
-							</div>
-						</div>
-						<div class="event-schedule-item">
-							<div class="schedule-item-img"><img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-3.png" alt="img"></div>
-							<div class="schedule-item-info">
-								<div class="date">13:00 - 14:00</div>
-								<h4>Ut enim ad minima veniam, quis</h4>
-								<div class="schedule-info-content">
-									<p>At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesentium volup</p>
-								</div>
-							</div>
-						</div>
-						<div class="event-schedule-item">
-							<div class="schedule-item-img"><img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/icon-4.png" alt="img"></div>
-							<div class="schedule-item-info">
-								<div class="date">14:00 - 15:00</div>
-								<h4>Quis autem vel eum iure reprehend</h4>
-								<div class="schedule-info-content">
-									<p>At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesentium volup</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 event-schedule-img">
-					<div class="schedule-img-wrap">
-						<img class="schedule-effect-tringle" src="assets/img/tringle-gray-little.svg" alt="img">
-						<img class="schedule-img-effect" src="assets/img/our-mission-2.svg" alt="img">
-						<img class="schedule-img rx-lazy" src="assets/img/placeholder-all.png" data-src="INTERFILIERES/550x713.png" alt="img">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- ============ S-EVENT-SCHEDULE END ============ -->
-
-	<!-- =============== MAP-WITH-ROUTE =============== -->
-	<section id="location" class="map-with-route">
-		<div class="container">
-			<h2 class="title"><span>Map with route</span></h2>
-			<div class="row">
-				<div class="col-lg-6 map-route-img">
-					<span>
-						<img src="assets/img/our-mission-2.svg" alt="img" class="map-img-effect-1">
-						<img src="assets/img/tringle-gray-little.svg" alt="img" class="map-img-effect-2">
-						<img class="rx-lazy map-img" src="assets/img/placeholder-all.png" data-src="assets/img/map.png" alt="img">
-					</span>
-				</div>
-				<div class="col-lg-6 map-route-info">
-					<div class="map-route-cover">
-						<h4>There are many variations of passages of Lorem Ipsum available</h4>
-						<div class="route-info-content">
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. At vero eos et accusamus et iusto.</p>
-						</div>
-						<div class="mission-number-cover">
-							<div class="mission-number-item">
-								<img src="assets/img/map-effect.svg" alt="img" class="map-img-effect">
-								<div class="number">42,4km</div>
-								<span>Run distance</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- ============= MAP-WITH-ROUTE END ============= -->
-
-	<!-- ============= MAP-WITH-ROUTE END ============= -->
-	<section id="register" class="s-marathon-register">
-		<img src="assets/img/tringle-gray-little.svg" alt="img" class="register-img-effect-2">
-		<div class="container">
-			<div class="marathon-register-row">
-				<img src="assets/img/placeholder-all.png" data-src="assets/img/register-img.png" alt="img" class="register-img rx-lazy">
-					<div class="marathon-register">
-						<img src="assets/img/our-mission-2.svg" alt="img" class="register-img-effect-1">
-						<h2 class="title"><span>Register form</span></h2>
-						<form id='contactform' action="assets/php/contact.php" name="contactform">
-							<ul class="form-cover">
-								<li class="inp-cover inp-name"><input id="name" type="text" name="your-name" placeholder="Name"></li>
-								<li class="inp-cover inp-email"><input id="email" type="email" name="your-email" placeholder="E-mail"></li>
-								<li class="inp-cover inp-age">
-									<select class="nice-select">
-										<option selected="selected" disabled>Age</option>
-										<option>18 - 25</option>
-										<option>26 - 30</option>
-										<option>31 - 35</option>
-										<option>36 - 40</option>
-										<option>41+</option>
-									</select>
-								</li>
-								<li class="inp-cover inp-gender">
-									<select class="nice-select">
-										<option selected="selected" disabled>Gender</option>
-										<option>Male</option>
-										<option>Female</option>
-									</select>
-								</li>
-								<li class="inp-text"><textarea id="comments" name="your-text" placeholder="Message"></textarea></li>
-							</ul>
-							<div class="checkbox-wrap">
-								<div class="checkbox-cover">
-									<input type="checkbox">
-									<p>By using this form you agree with the storage and handling of your data by this website.</p>
-								</div>
-							</div>
-							<div class="btn-form-cover">
-								<button id="#submit" type="submit" class="btn"><span>Register</span></button>
-							</div>
-						</form>
-						<div id="message"></div>
-					</div>
-			</div>
-		</div>
-	</section>
-	<!-- ============= MAP-WITH-ROUTE END ============= -->
-
-	<!--=================== S-CLIENTS ===================-->
-	<section class="s-clients">
-		<div class="container">
-			<h2 class="title"><span>Sponsors</span></h2>
-			<div class="clients-cover">
-				<div class="client-slide">
-					<div class="client-slide-cover">
-						<img src="assets/img/client-1.svg" alt="img">
-					</div>
-				</div>
-				<div class="client-slide">
-					<div class="client-slide-cover">
-						<img src="assets/img/client-2.svg" alt="img">
-					</div>
-				</div>
-				<div class="client-slide">
-					<div class="client-slide-cover">
-						<img src="assets/img/client-4.svg" alt="img">
-					</div>
-				</div>
-				<div class="client-slide">
-					<div class="client-slide-cover">
-						<img src="assets/img/client-5.svg" alt="img">
-					</div>
-				</div>
-				<div class="client-slide">
-					<div class="client-slide-cover">
-						<img src="assets/img/client-6.svg" alt="img">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================= S-CLIENTS END =================-->
-
-	<!--================ S-MARATHON-NEWS ================-->
-	<section id="news" class="s-marathon-news">
-		<div class="container">
-			<h2 class="title"><span>Our news</span></h2>
-			<div class="marathon-news-slider">
-				<div class="marathon-news-slide">
-					<div class="marathon-news-date"><span>March</span>10, 2020</div>
-					<div class="marathon-news-item">
-						<h5><a href="single-blog.html">Sed ut perspiciatis unde omnis iste natus error sit</a></h5>
-						<div class="marathon-post-thumbnail">
-							<a href="single-blog.html"><img src="assets/img/post-1-home-1.jpg" alt="img"></a>
-						</div>
-						<div class="marathon-post-content">
-							<p>Сonsectetur adipiscing elit, sed do eiusmod tempor</p>
-							<div class="marathon-post-meta">
-								<i class="fas fa-comment rxta-dynamic-meta-icon" aria-hidden="true"></i>
-								<a href="blog.html">0 Comment(s)</a>
-							</div>
-							<a href="single-blog.html" class="btn"><span>Read More</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="marathon-news-slide">
-					<div class="marathon-news-date"><span>April</span>15, 2020</div>
-					<div class="marathon-news-item">
-						<h5><a href="single-blog.html">It has survived not only five centuries</a></h5>
-						<div class="marathon-post-thumbnail">
-							<a href="single-blog.html"><img src="assets/img/post-2-home-1.jpg" alt="img"></a>
-						</div>
-						<div class="marathon-post-content">
-							<p>Many desktop publishing packages and web page</p>
-							<div class="marathon-post-meta">
-								<i class="fas fa-comment rxta-dynamic-meta-icon" aria-hidden="true"></i>
-								<a href="blog.html">0 Comment(s)</a>
-							</div>
-							<a href="single-blog.html" class="btn"><span>Read More</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="marathon-news-slide">
-					<div class="marathon-news-date"><span>June</span>25, 2020</div>
-					<div class="marathon-news-item">
-						<h5><a href="single-blog.html">But I must explain to you how all this mistaken idea</a></h5>
-						<div class="marathon-post-thumbnail">
-							<a href="single-blog.html"><img src="assets/img/post-3-home-1.jpg" alt="img"></a>
-						</div>
-						<div class="marathon-post-content">
-							<p>Various versions have evolved over the years</p>
-							<div class="marathon-post-meta">
-								<i class="fas fa-comment rxta-dynamic-meta-icon" aria-hidden="true"></i>
-								<a href="blog.html">0 Comment(s)</a>
-							</div>
-							<a href="single-blog.html" class="btn"><span>Read More</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="marathon-news-slide">
-					<div class="marathon-news-date"><span>September</span>20, 2020</div>
-					<div class="marathon-news-item">
-						<h5><a href="single-blog.html">Nor again is there anyone who loves or pursues</a></h5>
-						<div class="marathon-post-thumbnail">
-							<a href="single-blog.html"><img src="assets/img/post-4-home-1.jpg" alt="img"></a>
-						</div>
-						<div class="marathon-post-content">
-							<p>The point of using Lorem Ipsum is that</p>
-							<div class="marathon-post-meta">
-								<i class="fas fa-comment rxta-dynamic-meta-icon" aria-hidden="true"></i>
-								<a href="blog.html">0 Comment(s)</a>
-							</div>
-							<a href="single-blog.html" class="btn"><span>Read More</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="marathon-news-slide">
-					<div class="marathon-news-date"><span>October</span>10, 2020</div>
-					<div class="marathon-news-item">
-						<h5><a href="single-blog.html">At vero eos et accusamus et iusto odio dignissimos</a></h5>
-						<div class="marathon-post-thumbnail">
-							<a href="single-blog.html"><img src="assets/img/post-5-home-1.jpg" alt="img"></a>
-						</div>
-						<div class="marathon-post-content">
-							<p>All the Lorem Ipsum generators on the Internet</p>
-							<div class="marathon-post-meta">
-								<i class="fas fa-comment rxta-dynamic-meta-icon" aria-hidden="true"></i>
-								<a href="blog.html">0 Comment(s)</a>
-							</div>
-							<a href="single-blog.html" class="btn"><span>Read More</span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--============== S-MARATHON-NEWS END ==============-->
-
-	<!--================== S-INSTAGRAM ==================-->
-	<section class="s-instagram">
-		<div class="instagram-cover">
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">234 <i class="far fa-comment"></i></li>
-					<li class="like">134 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-1.jpg" alt="img">
-			</a>
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">222 <i class="far fa-comment"></i></li>
-					<li class="like">118 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-2.jpg" alt="img">
-			</a>
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">224 <i class="far fa-comment"></i></li>
-					<li class="like">124 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-3.jpg" alt="img">
-			</a>
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">155 <i class="far fa-comment"></i></li>
-					<li class="like">107 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-4.jpg" alt="img">
-			</a>
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">350 <i class="far fa-comment"></i></li>
-					<li class="like">140 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-5.jpg" alt="img">
-			</a>
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">350 <i class="far fa-comment"></i></li>
-					<li class="like">140 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-6.jpg" alt="img">
-			</a>
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">350 <i class="far fa-comment"></i></li>
-					<li class="like">140 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-7.jpg" alt="img">
-			</a>
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">350 <i class="far fa-comment"></i></li>
-					<li class="like">140 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-8.jpg" alt="img">
-			</a>
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">350 <i class="far fa-comment"></i></li>
-					<li class="like">140 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-9.jpg" alt="img">
-			</a>
-			<a href="#" class="instagram-item">
-				<ul>
-					<li class="comments">350 <i class="far fa-comment"></i></li>
-					<li class="like">140 <i class="far fa-heart"></i></li>
-				</ul>
-				<img class="rx-lazy" src="assets/img/placeholder-all.png" data-src="assets/img/instagram-10.jpg" alt="img">
-			</a>
-		</div>
-	</section>
-	<!--================ S-INSTAGRAM END ================-->
-
-	<!--==================== FOOTER ====================-->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="footer-cont col-12 col-sm-6 col-lg-4">
-					<a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="logo"></a>
-					<p>7100 Athens Place Washington, DC 20521</p>
-					<ul class="footer-contacts">
-						<li class="footer-phone">
-							<i aria-hidden="true" class="fas fa-phone"></i>
-							<a href="tel:+18001234567">1-800-1234-567</a>
-						</li>
-						<li class="footer-email">
-							<a href="mailto:rovadex@gmail.com">rovadex@gmail.com</a>
-						</li>
-					</ul>
-					<div class="footer-copyright"><a target="_blank" href="https://rovadex.com">Rovadex</a> © 2019. All Rights Reserved.</div>
-				</div>
-				<div class="footer-item-link col-12 col-sm-6 col-lg-4">
-					<div class="footer-link">
-						<h5>Event</h5>
-						<ul class="footer-list">
-							<li><a href="#about">About</a></li>
-							<li><a href="#news">News</a></li>
-							<li><a href="#schedule">Key figures</a></li>
-							<li><a href="#schedule">Runners' Photos</a></li>
-							<li><a href="#schedule">Results</a></li>
-							<li><a href="#schedule">Partners</a></li>
-						</ul>
-					</div>
-					<div class="footer-link">
-						<h5>Social</h5>
-						<ul class="footer-list">
-							<li><a target="_blank" href="https://www.facebook.com/rovadex">Facebook</a></li>
-							<li><a target="_blank" href="https://twitter.com/RovadexStudio">Twitter</a></li>
-							<li><a target="_blank" href="https://www.instagram.com/rovadex">Instagram</a></li>
-							<li><a target="_blank" href="https://www.youtube.com">Youtube</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer-subscribe col-12 col-sm-6 col-lg-4">
-					<h5>Subscribe to our newsletter. Stay up to date with our latest news and updates.</h5>
-					<form class="subscribe-form">
-						<input class="inp-form" type="email" name="subscribe" placeholder="E-mail">
-						<button class="btn-form" type="submit"><i class="fas fa-paper-plane"></i></button>
-					</form>
-					<p>By clicking the button you agree to the <a href="#" target="_blank">Privacy Policy</a> and <a href="#" target="_blank">Terms and Conditions</a></p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!--================== FOOTER END ==================-->
-
-	<!--=================== TO TOP ===================-->
-	<a class="to-top" href="#home">
-		<i class="fa fa-angle-double-up" aria-hidden="true"></i>
-	</a>
-	<!--================= TO TOP END =================-->
-
-	<!--=================== SCRIPT	===================-->
-	<script src="assets/js/jquery-2.2.4.min.js"></script>
-	<script src="assets/js/slick.min.js"></script>
-	<script src="assets/js/rx-lazy.js"></script>
-	<script src="assets/js/jquery.nice-select.js"></script>
-	<script src="assets/js/parallax.min.js"></script>
-	<script src="assets/js/scripts.js"></script>
+    <!-- Contenedor para las imágenes -->
+    <div class="images-row">
+        <img src="./WARMUP/asso1.jpg" alt="Imagen 1">
+        <img src="./WARMUP/asso2.jpg" alt="Imagen 2">
+    </div>
 </body>
 </html>
