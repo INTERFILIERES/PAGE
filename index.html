@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Simple</title>
+    <title>WARMUP</title>
+    <link rel="icon" href="./WARMUP/logopag.png" type="image/png">
     <style>
-
         @font-face {
             font-family: 'MollieRocky';
             src: url('./assets/fonts/MollieRockyDEMOMedium.ttf') format('truetype');
@@ -28,19 +28,41 @@
             background-image: url('./WARMUP/fonde-black2.jpg'); /* Cambia esto por tu imagen */
             background-size: cover;
             background-position: center;
+            background-attachment: fixed; /* Hace que el fondo sea fijo */
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.1); /* Ajusta la opacidad */
-            background-blend-mode: darken; /* Mezcla la imagen con el color */ 
+            background-color: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad */
+            background-blend-mode: darken; /* Mezcla la imagen con el color */
+            overflow-x: hidden; /* Evita el desplazamiento horizontal */
         }
 
         .logo-text {
+            
             font-family: 'MollieRocky', sans-serif; 
-            font-size: 225px; /* Incrementa el tamaño del texto */
-            color: rgb(187, 183, 175);
-            text-shadow: -5px 5px 0 rgba(0, 0, 0, 1); /* Sombra sólida abajo a la izquierda */
+            font-size: 225px;
             text-transform: uppercase;
-            width: 100%; /* Hace que el logo ocupe todo el ancho */
-            text-align: center; /* Asegura que el texto esté centrado */
+            width: 100%;
+            text-align: center;
+            position: relative;
+            
+            /* Agregar relleno con textura */
+            
+            background-image: url('./WARMUP/colors2.png'); /* Ruta de la textura */
+            background-size: cover;
+            background-position: center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(0, 0, 0, 0.2);
+            -webkit-text-stroke: 0.8px rgb(187, 183, 175); /* Contorno blanco */
+
+        }
+
+        .logo-text-subtitle {
+            font-family: 'OCRAExtended', sans-serif;
+            font-size: 18px;
+            font-style: italic;
+            color: rgb(187, 183, 175);
+            position: relative;
+            bottom: 45px;
+            left: 200px;
         }
 
         a {
@@ -56,11 +78,19 @@
         }
 
         p {
-            max-width: 500px;
-            margin: 0px;
+            max-width: 715px;
+            margin: 0 auto; /* Centra horizontalmente */
             line-height: 1.5;
             font-family: 'OCRAExtended', sans-serif;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            -webkit-text-stroke: 1px rgb(187, 183, 175); /* Contorno blanco */
+            color: black; /* Color del texto */
+            font-size: 20px; /* Tamaño de letra más grande */
+            text-align: justify; /* Justifica el texto */
+        }
+
+        p span {
+            color: rgb(0, 255, 170); /* Color del texto */
         }
 
         h1 {
@@ -71,25 +101,40 @@
             color: rgb(0, 255, 170);
         }
 
+        .info {
+            margin: 20px 0;
+            font-family: 'OCRAExtended', sans-serif;
+            font-size: 22px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            color: rgb(0, 255, 170);
+            max-width: 715px;
+            text-align: justify;
+        }
+
         .tickets-container {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Asegura que los elementos no se desborden */
         }
 
         .ticket {
-        display: inline-block;
-        margin: 25px;
-        padding: 45px 80px;
-        background-color: rgba(127, 52, 149, 0.8);
-        border: 2px solid rgb(187, 183, 175);
-        border-radius: 10px;
-        color: rgb(187, 183, 175);
-        font-family: 'OCRAExtended', sans-serif;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-        font-size: 35px;
-        text-align: center;
-        text-decoration: none; /* Remove underline */
-        transition: transform 0.2s, box-shadow 0.2s; /* Add hover effect */
+            display: inline-block;
+            margin: 25px;
+            padding: 45px 80px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), 
+                        url('./WARMUP/colors.png'); /* Mezcla el degradado con la textura */
+            background-size: cover; /* Asegura que la textura cubra completamente el área */
+            background-position: center; /* Centra la textura */
+            border: 2px solid rgb(187, 183, 175);
+            border-radius: 10px;
+            font-family: 'OCRAExtended', sans-serif;
+            text-shadow: 2px 2px 5px rgb(0, 194, 48);
+            -webkit-text-stroke: 1px white; /* Contorno blanco */
+            color: black; /* Color del texto */
+            font-size: 35px;
+            text-align: center;
+            text-decoration: none; /* Remove underline */
+            transition: transform 0.2s, box-shadow 0.2s; /* Add hover effect */
         }
 
         .ticket span {
@@ -101,8 +146,8 @@
         }
 
         .ticket:hover {
-        transform: scale(1.05); /* Slightly enlarge on hover */
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
         }
 
         .images-row {
@@ -111,6 +156,7 @@
             align-items: center; /* Alinear verticalmente */
             gap: 20px; /* Espaciado entre las imágenes */
             margin: 20px 0; /* Margen superior e inferior */
+            flex-wrap: wrap; /* Asegura que las imágenes no se desborden */
         }
 
         .images-row img {
@@ -125,6 +171,7 @@
             align-items: center; /* Alinear verticalmente */
             gap: 20px; /* Espaciado entre las imágenes */
             margin: 20px 0; /* Margen superior e inferior */
+            flex-wrap: wrap; /* Asegura que las imágenes no se desborden */
         }
 
         .images-row-2 img {
@@ -133,16 +180,25 @@
             border-radius: 10px; /* Bordes redondeados (opcional) */
         }
 
+
     </style>
 </head>
 <body>
-    <div class="logo-text">WARMUP</div>
-
-    <div class="images-row-2">
-        <img src="./WARMUP/tete.png" alt="Imagen 1">
-        <p>Le Lorem Ipsum est simplement du faux texte employé dans lan livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des aplicaciones de mise en page de texto, comme Aldus PageMaker.</p>
+    <div class="logo-text">
+        WARMUP
+        
     </div>
+    <div class="logo-text-subtitle">Le DJ contest de l’Université Paris-Saclay🎧</div>
 
+    <p>L’Interfilières, invitée par l’AdR CentraleSupélec, vous attendent pour une soirée mémorable. Les meilleurs DJ de l’université s’y affronteront pour avoir la chance de mixer à L’Interfilières.
+
+        Un jury exigeant. Un public déterminant. Une seule opportunité.
+    </p>
+
+    <div class="info" style="margin-top: 50px; margin-bottom: 50px;">
+        📅 <strong>Date</strong>: 31 Janvier | 23h - 5h<br>
+        📍 <strong>Lieu</strong>: Bâtiment Bouygues | CentraleSupélec - UPS
+    </div>
 
     <div class="tickets-container">
         <a href="https://www.GOOGLE.com" target="_blank" class="ticket">
@@ -153,7 +209,16 @@
         </a>
     </div>
 
-    <!-- Contenedor para las imágenes -->
+    <div class="info" style="font-size: 14px; color: rgb(187, 183, 175); max-width: 600px; text-align: center; margin-top: -10px;">
+        ⚠️ <strong>Rappel</strong>: L'accès à l'événement est réservé aux majeurs. Une <strong>carte étudiante</strong> et une <strong>carte d'identité</strong> seront demandées à l'entrée après achat des tickets. 
+    </div>
+
+
+
+    <p style="margin-top: 50px; margin-bottom: 50px;">
+        Quels DJs d’<span>@agronomix</span>, <span>@djk</span>, <span>@sonoensta</span>, <span>@sonoptik</span>, <span>@mkb</span>, <span>@sbcs</span> ou <span>@cmix</span> gagneront leur place au plus grand festival de Paris-Saclay ?
+    </p>
+        
     <div class="images-row">
         <img src="./WARMUP/asso1.jpg" alt="Imagen 1">
         <img src="./WARMUP/asso2.jpg" alt="Imagen 2">
