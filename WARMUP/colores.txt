@@ -1,0 +1,7 @@
+f9e62c  amarillo	#fabbe6; /* Rose1 */
+00a346  verde		#e05ecc; /* Rose2 */
+3a2b86  blue		#4a2354; /* Violet */
+8f4591	violeta		#002257; /* Bleu */
+df0024	rojo		#2fa8bd; /* Cyan2 */
+e97529  naranja		#30c1db; /* Cyan1 */
+

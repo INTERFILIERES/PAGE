@@ -1,227 +1,787 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-56FJVP6HLF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-56FJVP6HLF');
+    </script>
+    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>WARMUP</title>
-    <link rel="icon" href="./WARMUP/logopag.png" type="image/png">
+    <link rel="icon" type="image/x-icon" href="WARMUP/tete.ico">
     <style>
         @font-face {
             font-family: 'MollieRocky';
-            src: url('./assets/fonts/MollieRockyDEMOMedium.ttf') format('truetype');
+            src: url('./WARMUP/fonts/MollieRockyDEMOMedium.ttf') format('truetype');
         }
         @font-face {
             font-family: 'OCRAExtended';
-            src: url('./assets/fonts/OCRAExtended.ttf') format('truetype');
+            src: url('./WARMUP/fonts/OCRAExtended.ttf') format('truetype');
+        }
+        @keyframes shadowColorChange {
+            0% {
+                text-shadow: 
+                    0 0 1vw #f9e62c,
+                    0 0 2vw #f9e62c; /* Rose1 */
+                -webkit-text-stroke: 0.15vw #f9e62c; 
+            }
+            10% {
+                text-shadow:
+                    0 0 1vw #00a346,
+                    0 0 2vw #00a346; /* Rose2 */
+                -webkit-text-stroke: 0.15vw #00a346; 
+            }
+            20% {
+                text-shadow:
+                    0 0 1vw #3a2b86,
+                    0 0 2vw #3a2b86; /* Violet */
+                -webkit-text-stroke: 0.15vw #3a2b86; 
+            }
+            30% {
+                text-shadow:
+                    0 0 1vw #8f4591,
+                    0 0 2vw #8f4591; /* Bleu */
+                -webkit-text-stroke: 0.15vw #8f4591; 
+            }
+            40% {
+                text-shadow:
+                    0 0 1vw #df0024,
+                    0 0 2vw #df0024; /* Cyan2 */
+                -webkit-text-stroke: 0.15vw #df0024; 
+            }
+            50% {
+                text-shadow:
+                    0 0 1vw #e97529,
+                    0 0 2vw #e97529; /* Cyan1 */
+                -webkit-text-stroke: 0.15vw #e97529; 
+            }
+            60% {
+                text-shadow:
+                    0 0 1vw #df0024,
+                    0 0 2vw #df0024; /* Cyan2 */
+                -webkit-text-stroke: 0.15vw #df0024; 
+            }
+            70% {
+                text-shadow:
+                    0 0 1vw #8f4591,
+                    0 0 2vw #8f4591; /* Bleu */
+                -webkit-text-stroke: 0.15vw #8f4591; 
+            }
+            80% {
+                text-shadow:
+                    0 0 1vw #3a2b86,
+                    0 0 2vw #3a2b86; /* Violet */
+                -webkit-text-stroke: 0.15vw #3a2b86; 
+            }
+            90% {
+                text-shadow:
+                    0 0 1vw #00a346,
+                    0 0 2vw #00a346; /* Rose2 */
+                -webkit-text-stroke: 0.15vw #00a346;    
+            }
+            100% {
+                text-shadow: 
+                    0 0 1vw #f9e62c,
+                    0 0 2vw #f9e62c; /* Rose1 */
+                -webkit-text-stroke: 0.15vw #f9e62c;   
+            }
+        }
+        @keyframes boxshadowColorChange {
+            0% {
+                border: 0.1vw solid #f9e62c;
+                box-shadow: 
+                    0 0 1vw #f9e62c,
+                    0 0 2vw #f9e62c,
+                    0 0 3vw #f9e62c; /* Rose1 */
+            }
+            10% {
+                border: 0.1vw solid #00a346;
+                box-shadow:
+                    0 0 1vw #00a346,
+                    0 0 2vw #00a346,
+                    0 0 3vw #00a346; /* Rose2 */
+            }
+            20% {
+                border: 0.1vw solid #3a2b86;
+                box-shadow:
+                    0 0 1vw #3a2b86,
+                    0 0 2vw #3a2b86,
+                    0 0 3vw #3a2b86; /* Violet */
+            }
+            30% {
+                border: 0.1vw solid #8f4591;
+                box-shadow:
+                    0 0 1vw #8f4591,
+                    0 0 2vw #8f4591,
+                    0 0 3vw #8f4591; /* Bleu */
+            }
+            40% {
+                border: 0.1vw solid #df0024;
+                box-shadow:
+                    0 0 1vw #df0024,
+                    0 0 2vw #df0024,
+                    0 0 3vw #df0024; /* Cyan2 */
+            }
+            50% {
+                border: 0.1vw solid #e97529;
+                box-shadow:
+                    0 0 1vw #e97529,
+                    0 0 2vw #e97529,
+                    0 0 3vw #e97529; /* Cyan1 */
+            }
+            60% {
+                border: 0.1vw solid #df0024;
+                box-shadow:
+                    0 0 1vw #df0024,
+                    0 0 2vw #df0024,
+                    0 0 3vw #df0024; /* Cyan2 */
+            }
+            70% {
+                border: 0.1vw solid #8f4591;
+                box-shadow:
+                    0 0 1vw #8f4591,
+                    0 0 2vw #8f4591,
+                    0 0 3vw #8f4591; /* Bleu */
+            }
+            80% {
+                border: 0.1vw solid #3a2b86;
+                box-shadow:
+                    0 0 1vw #3a2b86,
+                    0 0 2vw #3a2b86,
+                    0 0 3vw #3a2b86; /* Violet */
+            }
+            90% {
+                border: 0.1vw solid #00a346;
+                box-shadow:
+                    0 0 1vw #00a346,
+                    0 0 2vw #00a346,
+                    0 0 3vw #00a346; /* Rose2 */
+            }
+            100% {
+                border: 0.1vw solid #f9e62c;
+                box-shadow: 
+                    0 0 1vw #f9e62c,
+                    0 0 2vw #f9e62c,
+                    0 0 3vw #f9e62c; /* Rose1 */
+            }
+        }
+        @keyframes textshadowChange {
+            0% {
+                text-shadow: 
+                    0 0 0.5vw #f9e62c,
+                    0 0 0.5vw #f9e62c,
+                    0 0 0.5vw #f9e62c; /* Rose1 */
+            }
+            10% {
+                text-shadow: 
+                    0 0 0.5vw #00a346,
+                    0 0 0.5vw #00a346,
+                    0 0 0.5vw #00a346; /* Rose2 */
+            }
+            20% {
+                text-shadow:
+                    0 0 0.5vw #3a2b86,
+                    0 0 0.5vw #3a2b86,
+                    0 0 0.5vw #3a2b86; /* Violet */
+            }
+            30% {
+                text-shadow:
+                    0 0 0.5vw #8f4591,
+                    0 0 0.5vw #8f4591,
+                    0 0 0.5vw #8f4591; /* Bleu */
+            }
+            40% {
+                text-shadow:
+                    0 0 0.5vw #df0024,
+                    0 0 0.5vw #df0024,
+                    0 0 0.5vw #df0024; /* Cyan2 */
+            }
+            50% {
+                text-shadow: 
+                    0 0 0.5vw #e97529,
+                    0 0 0.5vw #e97529,
+                    0 0 0.5vw #e97529; /* Cyan1 */
+            }
+            60% {
+                text-shadow:
+                    0 0 0.5vw #df0024,
+                    0 0 0.5vw #df0024,
+                    0 0 0.5vw #df0024; /* Cyan2 */
+            }
+            70% {
+                text-shadow:
+                    0 0 0.5vw #8f4591,
+                    0 0 0.5vw #8f4591,
+                    0 0 0.5vw #8f4591; /* Bleu */
+            }
+            80% {
+                text-shadow:
+                    0 0 0.5vw #3a2b86,
+                    0 0 0.5vw #3a2b86,
+                    0 0 0.5vw #3a2b86; /* Violet */
+            }
+            90% {
+                text-shadow:
+                    0 0 0.5vw #00a346,
+                    0 0 0.5vw #00a346,
+                    0 0 0.5vw #00a346; /* Rose2 */
+            }
+            100% {
+                text-shadow: 
+                    0 0 0.5vw #f9e62c,
+                    0 0 0.5vw #f9e62c,
+                    0 0 0.5vw #f9e62c; /* Rose1 */
+            }
+        }
+        @keyframes textandboxChange {
+            0% {
+                border: 0.1vw solid #f9e62c;
+                box-shadow: 
+                    0 0 1vw #f9e62c,
+                    0 0 2vw #f9e62c; /*,
+                    0 0 3vw #f9e62c Rose1 */
+                text-shadow: 
+                    0 0 0.5vw #f9e62c,
+                    0 0 0.5vw #f9e62c,
+                    0 0 0.5vw #f9e62c; /* Rose1 */
+            }
+            10% {
+                border: 0.1vw solid #00a346;
+                box-shadow:
+                    0 0 1vw #00a346,
+                    0 0 2vw #00a346; /*,
+                    0 0 3vw #00a346 Rose2 */
+                text-shadow: 
+                    0 0 0.5vw #00a346,
+                    0 0 0.5vw #00a346,
+                    0 0 0.5vw #00a346; /* Rose2 */
+            }
+            20% {
+                border: 0.1vw solid #3a2b86;
+                box-shadow:
+                    0 0 1vw #3a2b86,
+                    0 0 2vw #3a2b86; /* ,
+                    0 0 3vw #3a2b86Violet */
+                text-shadow:
+                    0 0 0.5vw #3a2b86,
+                    0 0 0.5vw #3a2b86,
+                    0 0 0.5vw #3a2b86; /* Violet */
+            }
+            30% {
+                border: 0.1vw solid #8f4591;
+                box-shadow:
+                    0 0 1vw #8f4591,
+                    0 0 2vw #8f4591; /* ,
+                    0 0 3vw #8f4591Bleu */
+                text-shadow:
+                    0 0 0.5vw #8f4591,
+                    0 0 0.5vw #8f4591,
+                    0 0 0.5vw #8f4591; /* Bleu */
+            }
+            40% {
+                border: 0.1vw solid #df0024;
+                box-shadow:
+                    0 0 1vw #df0024,
+                    0 0 2vw #df0024; /* ,
+                    0 0 3vw #df0024Cyan2 */
+                text-shadow:
+                    0 0 0.5vw #df0024,
+                    0 0 0.5vw #df0024,
+                    0 0 0.5vw #df0024; /* Cyan2 */
+            }
+            50% {
+                border: 0.1vw solid #e97529;
+                box-shadow:
+                    0 0 1vw #e97529,
+                    0 0 2vw #e97529; /*,
+                    0 0 3vw #e97529 Cyan1 */
+                text-shadow: 
+                    0 0 0.5vw #e97529,
+                    0 0 0.5vw #e97529,
+                    0 0 0.5vw #e97529; /* Cyan1 */
+            }
+            60% {
+                border: 0.1vw solid #df0024;
+                box-shadow:
+                    0 0 1vw #df0024,
+                    0 0 2vw #df0024; /*,
+                    0 0 3vw #df0024 Cyan2 */
+                text-shadow:
+                    0 0 0.5vw #df0024,
+                    0 0 0.5vw #df0024,
+                    0 0 0.5vw #df0024; /* Cyan2 */
+            }
+            70% {
+                border: 0.1vw solid #8f4591;
+                box-shadow:
+                    0 0 1vw #8f4591,
+                    0 0 2vw #8f4591; /*,
+                    0 0 3vw #8f4591 Bleu */
+                text-shadow:
+                    0 0 0.5vw #8f4591,
+                    0 0 0.5vw #8f4591,
+                    0 0 0.5vw #8f4591; /* Bleu */
+            }
+            80% {
+                border: 0.1vw solid #3a2b86;
+                box-shadow:
+                    0 0 1vw #3a2b86,
+                    0 0 2vw #3a2b86; /*,
+                    0 0 3vw #3a2b86 Violet */
+                text-shadow:
+                    0 0 0.5vw #3a2b86,
+                    0 0 0.5vw #3a2b86,
+                    0 0 0.5vw #3a2b86; /* Violet */
+            }
+            90% {
+                border: 0.1vw solid #00a346;
+                box-shadow:
+                    0 0 1vw #00a346,
+                    0 0 2vw #00a346; /*,
+                    0 0 3vw #00a346 Rose2 */
+                text-shadow:
+                    0 0 0.5vw #00a346,
+                    0 0 0.5vw #00a346,
+                    0 0 0.5vw #00a346; /* Rose2 */
+            }
+            100% {
+                border: 0.1vw solid #f9e62c;
+                box-shadow: 
+                    0 0 1vw #f9e62c,
+                    0 0 2vw #f9e62c; /*,
+                    0 0 3vw #f9e62c Rose1 */
+                text-shadow: 
+                    0 0 0.5vw #f9e62c,
+                    0 0 0.5vw #f9e62c,
+                    0 0 0.5vw #f9e62c; /* Rose1 */
+            }
         }
 
         body {
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
             min-height: 100vh;
-            color: rgb(187, 183, 175);
+            color: #fff;
             font-family: 'OCRAExtended', sans-serif;
-            background-image: url('./WARMUP/fonde-black2.jpg'); /* Cambia esto por tu imagen */
+            background-image: url('./WARMUP/fonde-black3.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Hace que el fondo sea fijo */
+            background-attachment: fixed;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad */
-            background-blend-mode: darken; /* Mezcla la imagen con el color */
-            overflow-x: hidden; /* Evita el desplazamiento horizontal */
+            background-color: rgba(0, 0, 0, 0.7);
+            background-blend-mode: darken;
+            overflow-x: hidden;
         }
-
         .logo-text {
-            
-            font-family: 'MollieRocky', sans-serif; 
-            font-size: 225px;
+            font-family: 'MollieRocky', sans-serif;
+            font-size: 12vw; /* Relative size for responsiveness */
             text-transform: uppercase;
             width: 100%;
             text-align: center;
             position: relative;
-            
-            /* Agregar relleno con textura */
-            
-            background-image: url('./WARMUP/colors2.png'); /* Ruta de la textura */
-            background-size: cover;
-            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0.1) 100%), 
+                        url('https://iili.io/2r8lUv9.gif');*/
+            /* background-color: rgba(255, 255, 255, 0.7);
+            background-image: url('https://iili.io/2r8lUv9.gif'); */
+            background-size: contain;
+            background-position: bottom;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: rgba(0, 0, 0, 0.2);
-            -webkit-text-stroke: 0.8px rgb(187, 183, 175); /* Contorno blanco */
-
+            -webkit-text-fill-color: transparent;
         }
-
+        .logo-text::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; 
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            font-family: inherit; /* Usa las mismas propiedades del texto principal */
+            font-size: inherit;
+            text-transform: inherit;
+            text-align: inherit;
+            color: transparent;
+            /* 
+            text-shadow: 
+                0 0 1vw #4a2354,
+                0 0 2vw #4a2354,
+                0 0 3vw #4a2354; 
+            -webkit-text-stroke: 0.15vw #4a2354; 
+            */
+            animation: shadowColorChange 8.8s infinite;
+            /* 
+            text-shadow: 
+                0 0 1vw #3a2b86,
+                0 0 2vw #3a2b86,
+                0 0 3vw #3a2b86;
+                0 0 1vw rgb(92, 0, 153),
+                0 0 2vw rgb(156, 2, 149),
+                0 0 3vw rgb(209, 0, 98),
+                0 0 4vw rgb(209, 0, 0);
+*/
+        }
         .logo-text-subtitle {
+            margin-top: -1.8%;
             font-family: 'OCRAExtended', sans-serif;
-            font-size: 18px;
+            font-size: 1.5vw; /* Tamaño relativo */
             font-style: italic;
-            color: rgb(187, 183, 175);
+            color: #fff;
             position: relative;
-            bottom: 45px;
-            left: 200px;
+            bottom: 2vw;
+            text-align: right; /* Alinea el texto a la derecha */
+           /* margin-right: calc(-20%); */ /* Alinea al borde derecho de WARMUP */
+
+ /*           animation: colorChange 8.8s infinite;  Aplica la animación */
         }
+    
 
         a {
-            max-width: 1500px;
-            margin: 0px;
+            margin: 0;
             line-height: 1.5;
             font-family: 'OCRAExtended', sans-serif;
-            text-shadow: 2px 2px 5px rgba(0, 26, 255, 0.8);
+            text-shadow: 0.1vw 0.1vw 0.3vw rgba(44, 23, 54, 0.8);
         }
-
         a:hover {
             text-decoration: underline;
         }
 
         p {
-            max-width: 715px;
-            margin: 0 auto; /* Centra horizontalmente */
+            margin-top: 5%;
             line-height: 1.5;
             font-family: 'OCRAExtended', sans-serif;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-            -webkit-text-stroke: 1px rgb(187, 183, 175); /* Contorno blanco */
-            color: black; /* Color del texto */
-            font-size: 20px; /* Tamaño de letra más grande */
-            text-align: justify; /* Justifica el texto */
+            text-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 0.8);
+            color: rgb(255, 255, 255);
+            font-size: 1.5vw; /* Relative size */
+            text-align: justify;
+            margin-bottom: 3%;
+        }
+        p span {
+            color: #30c1db;
+        }
+        .highlight-background {
+            color: rgba(0, 0, 0, 0.0);
+            text-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 0.0);
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        .highlight-background::before {
+            content: "";
+            position: absolute;
+            top: -280%;
+            left: 0;
+            width: 100%;
+            height: 500%;
+            background-image: url('./WARMUP/secondary-logo-2.png'); /* Ruta de tu imagen PNG */
+            background-size: 100%; /* Ajusta al tamaño del texto */
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1; /* Envía la imagen detrás del texto */
+            opacity: 1; /* Ajusta la transparencia si es necesario */
         }
 
-        p span {
-            color: rgb(0, 255, 170); /* Color del texto */
-        }
 
         h1 {
             font-family: 'OCRAExtended', sans-serif;
             text-transform: uppercase;
-            text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.8);
-            letter-spacing: 2px;
-            color: rgb(0, 255, 170);
+            text-shadow: 0.15vw 0.15vw 0.35vw rgba(0, 0, 0, 0.8);
+            letter-spacing: 0.1vw;
+            color: rgb(144, 86, 147);
+        }
+        .info {
+            
+            font-family: 'OCRAExtended', sans-serif;
+            font-size: 2vw; /* Relative size */
+            
+            
+            text-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 0.8);
+            color: #2fa8bd;
+/*            animation: colorChange 8.8s infinite;  Aplica la animación */
+            text-align: justify;
+            margin-bottom: 5%;
+        }
+        .info2 {
+            font-family: 'OCRAExtended', sans-serif;
+            text-align: center;
+            text-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 0.8);
+            color: #ffffff;
         }
 
-        .info {
-            margin: 20px 0;
+        .bar {
+            height: auto; /* Ajusta la altura automáticamente */
+            padding: 3vw 0; /* Espaciado interno */
+
+
+            /*background-color: #30c1db;  Color celeste */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.1) 45%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.5) 100%), 
+                        url(./WARMUP/fond.jpg);
+                        /*url('https://iili.io/2r8lUv9.gif');*/
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            animation: textshadowChange 8.8s infinite;
+            color: #fff;
             font-family: 'OCRAExtended', sans-serif;
-            font-size: 22px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-            color: rgb(0, 255, 170);
-            max-width: 715px;
-            text-align: justify;
+            text-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 0.8);
+            text-align: center;
+            margin-bottom: 2vw; /* Espaciado inferior */
+            box-shadow: 0 0.5vw 1.3vw rgb(0, 0, 0); /* Sombra */
         }
 
         .tickets-container {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Asegura que los elementos no se desborden */
+            flex-wrap: wrap;
         }
-
         .ticket {
             display: inline-block;
-            margin: 25px;
-            padding: 45px 80px;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), 
-                        url('./WARMUP/colors.png'); /* Mezcla el degradado con la textura */
-            background-size: cover; /* Asegura que la textura cubra completamente el área */
-            background-position: center; /* Centra la textura */
-            border: 2px solid rgb(187, 183, 175);
-            border-radius: 10px;
-            font-family: 'OCRAExtended', sans-serif;
-            text-shadow: 2px 2px 5px rgb(0, 194, 48);
-            -webkit-text-stroke: 1px white; /* Contorno blanco */
-            color: black; /* Color del texto */
-            font-size: 35px;
-            text-align: center;
-            text-decoration: none; /* Remove underline */
-            transition: transform 0.2s, box-shadow 0.2s; /* Add hover effect */
-        }
+            margin: 1vw; /* Reduced margins for mobile */
+            /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), 
+                        url('https://iili.io/2r8lUv9.gif');*/
+            background-color: rgba(0, 0, 0, 0.7);
+            background-size: auto;
+            background-position: top;
 
+            border-radius: 0.5vw;
+            font-family: 'OCRAExtended', sans-serif;
+            
+            
+            font-size: 2.5vw; /* Relative size */
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+/*
+            border: 0.1vw solid #4a2354;
+            box-shadow: 
+                    0 0 1vw #4a2354,
+                    0 0 2vw #4a2354,
+                    0 0 3vw #4a2354;  */
+            color: white;
+            animation: textandboxChange 8.8s infinite; 
+        }
         .ticket span {
             display: block;
-            margin-top: 10px;
-            font-size: 14px;
-            color: rgb(0, 0, 0);
+            margin-top: 0.5vw; /* Reduced margin for mobile */
+            font-size: 1vw;
+            color: white;
             font-style: italic;
         }
-
         .ticket:hover {
-            transform: scale(1.05); /* Slightly enlarge on hover */
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+                        0 0 25px rgba(44, 23, 54, 0.9),
+                        0 0 35px rgba(44, 23, 54, 1),
+                        0 0 45px rgba(44, 23, 54, 1);
         }
+        
+
 
         .images-row {
             display: flex;
-            justify-content: center; /* Centrar las imágenes horizontalmente */
-            align-items: center; /* Alinear verticalmente */
-            gap: 20px; /* Espaciado entre las imágenes */
-            margin: 20px 0; /* Margen superior e inferior */
-            flex-wrap: wrap; /* Asegura que las imágenes no se desborden */
+            justify-content: center;
+            align-items: center;
+            gap: 1vw; /* Reduced gap for mobile */
+            margin: 1vw 0; /* Reduced vertical margins for mobile */
+            flex-wrap: nowrap; /* Force items to fit in one line */
         }
-
         .images-row img {
-            height: 200px; /* Altura fija para todas las imágenes */
-            object-fit: cover; /* Ajustar la imagen para que cubra el espacio */
-            border-radius: 10px; /* Bordes redondeados (opcional) */
+            object-fit: contain; /* Ensure consistent aspect ratio */
         }
 
         .images-row-2 {
             display: flex;
-            justify-content: center; /* Centrar las imágenes horizontalmente */
-            align-items: center; /* Alinear verticalmente */
-            gap: 20px; /* Espaciado entre las imágenes */
-            margin: 20px 0; /* Margen superior e inferior */
-            flex-wrap: wrap; /* Asegura que las imágenes no se desborden */
+            justify-content: center;
+            align-items: center;
+            gap: 1vw; /* Reduced gap for mobile */
+            flex-wrap: nowrap; /* Force items to fit in one line */
+        }
+        .images-row-2 img {
+            object-fit: contain; /* Ensure consistent aspect ratio */
         }
 
-        .images-row-2 img {
-            height: 250px; /* Altura fija para todas las imágenes */
-            object-fit: cover; /* Ajustar la imagen para que cubra el espacio */
-            border-radius: 10px; /* Bordes redondeados (opcional) */
+        @media (min-width: 769px) { /*desktop*/
+
+            a{
+                max-width: 60%;
+            }  
+
+            h1{
+                max-width: 60%;
+            }  
+
+            .logo-text {
+                font-size: 10vw;
+            }
+
+            .logo-text-subtitle {
+                font-size: 1.5vw;
+                bottom: 0.5vw;
+            }
+
+            p{
+                max-width: 60%;
+            }   
+
+            .info {
+                font-size: 1.5vw;
+            }
+
+            .info2 {
+                font-size: 1vw;
+
+            }
+
+            .bar {
+                background-size: cover;
+                background-position: center;
+                font-size: 2vw;
+                border-radius: 0.5vw;
+                width: 100%;
+
+            }
+
+            .ticket {
+                padding: 3vw 6vw;
+                font-size: 2vw;
+            }
+
+            .images-row img {
+                height: 18.8vw; /* Set maximum height */
+            }
+
+            .images-row-2 img {
+                height: 8.3vw;/* Set maximum height */
+            }
+        }
+        @media (max-width: 768px) { /*mobile*/
+
+            a{
+                max-width: 95%;
+            }  
+
+            h1{
+                max-width: 95%;
+            } 
+
+            .logo-text {
+                font-size: 22vw;
+            }
+
+            .logo-text-subtitle {
+                font-size: 2.7vw;
+                margin-bottom: 5%;
+            }
+
+            .ticket {
+                padding: 4vw 10vw;
+                font-size: 3.5vw;
+            }
+
+            p{
+                max-width: 95%;
+                font-size: 3.5vw;
+            } 
+
+            .info {
+                font-size: 2.7vw;
+                max-width: 80%;
+            }
+
+            .info2 {
+                font-size: 1.5vw;
+            }
+
+            .bar {
+                background-size: cover;
+                font-size: 3vw;
+                width: 100%;
+            }
+
+            .images-row img {
+                height: 30vw; /* Set maximum height */
+            }
+
+            .images-row-2 img {
+                width: 94%; /* Set maximum height */
+            }
         }
 
 
     </style>
 </head>
+
 <body>
-    <div class="logo-text">
+
+    <div class="logo-text" data-text="WARMUP">
         WARMUP
-        
     </div>
-    <div class="logo-text-subtitle">Le DJ contest de l’Université Paris-Saclay🎧</div>
 
-    <p>L’Interfilières, invitée par l’AdR CentraleSupélec, vous attendent pour une soirée mémorable. Les meilleurs DJ de l’université s’y affronteront pour avoir la chance de mixer à L’Interfilières.
+    <div class="logo-text-subtitle">Le DJ contest de l’Université Paris-Saclay</div>
 
-        Un jury exigeant. Un public déterminant. Une seule opportunité.
+
+    <p>
+        <br>
+        <span class="highlight-background">L’Interfilières</span>, invitée par AdR CentraleSupélec</span>, vous organise une soirée mémorable, la WARMUP !🕺💃
+        <br><br>Les meilleurs DJ de l’Université, une seule chance, un set... 
+        <br>     L'opportunité de <strong>mixer à L’Interfilières</strong>
+        <br><br>
+    </p>
+    
+    <div class="bar">
+        <strong>
+            📅 31 Janvier | 23h - 5h<br>
+            📍 Bâtiment Bouygues | CentraleSupélec - Université Paris-Saclay<br><br>
+        </strong>
+        
+
+        <div class="tickets-container">
+            <a href="https://short.instadrink.io/e/dr4daz-warmup-2025" target="_blank" class="ticket">
+                Billet 9 €<span>Étudiants<br>Université Paris-Saclay<br>(Écoles, Fac, Iut)</span>
+            </a>
+            <a href="https://short.instadrink.io/e/dr4daz-warmup-2025" target="_blank" class="ticket">
+                Billet 15 €<span><br>Extérieures<br></span>
+            </a>
+        </div>
+
+        <div class="info2">
+            <br>
+            ⚠️ <strong>Rappel</strong>: L'accès à l'événement est réservé aux majeurs. Une <strong>carte étudiante</strong> et une <strong>carte d'identité</strong> seront demandées à l'entrée après achat des tickets. 
+            <br>
+            <br>
+        </div>
+    </div>
+
+
+    <p>
+        Quels DJs d’<span><a href="https://www.instagram.com/agronomix_apt" target="_blank" style="color: inherit;">@agronomix</a></span>, 
+        <span><a href="https://www.instagram.com/djk_ensps" target="_blank" style="color: inherit;">@djk</a></span>, 
+        <span><a href="https://www.instagram.com/sonoensta" target="_blank" style="color: inherit;">@sonoensta</a></span>, 
+        <span><a href="https://www.instagram.com/sonoptik_iogs" target="_blank" style="color: inherit;">@sonoptik</a></span>, 
+        <span><a href="https://www.instagram.com/amkb.asso" target="_blank" style="color: inherit;">@mkb</a></span>, 
+        <span><a href="https://www.instagram.com/sbcs_sonobarco" target="_blank" style="color: inherit;">@sbcs</a></span> ou 
+        <span><a href="https://www.instagram.com/cmix_cs" target="_blank" style="color: inherit;">@cmix</a></span> gagneront leur place au plus grand festival de Paris-Saclay ?
     </p>
 
-    <div class="info" style="margin-top: 50px; margin-bottom: 50px;">
-        📅 <strong>Date</strong>: 31 Janvier | 23h - 5h<br>
-        📍 <strong>Lieu</strong>: Bâtiment Bouygues | CentraleSupélec - UPS
-    </div>
-
-    <div class="tickets-container">
-        <a href="https://www.GOOGLE.com" target="_blank" class="ticket">
-            Billet 1<br>9 €<span>Etudiants UPS</span>
-        </a>
-        <a href="https://www.GOOGLE.com" target="_blank" class="ticket">
-            Billet 2<br>15 €<span>Extérieures</span>
-        </a>
-    </div>
-
-    <div class="info" style="font-size: 14px; color: rgb(187, 183, 175); max-width: 600px; text-align: center; margin-top: -10px;">
-        ⚠️ <strong>Rappel</strong>: L'accès à l'événement est réservé aux majeurs. Une <strong>carte étudiante</strong> et une <strong>carte d'identité</strong> seront demandées à l'entrée après achat des tickets. 
-    </div>
-
-
-
-    <p style="margin-top: 50px; margin-bottom: 50px;">
-        Quels DJs d’<span>@agronomix</span>, <span>@djk</span>, <span>@sonoensta</span>, <span>@sonoptik</span>, <span>@mkb</span>, <span>@sbcs</span> ou <span>@cmix</span> gagneront leur place au plus grand festival de Paris-Saclay ?
-    </p>
-        
     <div class="images-row">
         <img src="./WARMUP/asso1.jpg" alt="Imagen 1">
         <img src="./WARMUP/asso2.jpg" alt="Imagen 2">
     </div>
+    <div class="images-row-2">
+        <img src="./WARMUP/asso4.jpg" alt="Imagen 3">
+    </div> 
 </body>
+
+
 </html>
+
+		
